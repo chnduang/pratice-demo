@@ -44,10 +44,8 @@ const EditorComp = memo((props: any) => {
     formData.append('file', content);
     const res = await axios({
       method: 'POST',
-      url: `https://gateway.open.hand-china.com/hfle/v1/3/files/multipart`,
       data: formData,
       headers: {
-        Authorization: 'bearer 68d3abfa-9977-47a6-863c-ed6dd6b29873',
         'Content-Type': 'multipart/form-data;charset=UTF-8',
       },
     });
