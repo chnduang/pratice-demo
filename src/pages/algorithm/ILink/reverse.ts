@@ -35,3 +35,26 @@ export const reverseILink = (listNode: ILinkNode): ILinkNode => {
 
   return curNode!;
 };
+
+// 创建链表
+export const createLink = (arr: number[]): ILinkNode => {
+  const length = arr.length;
+  if (!length) {
+    throw new Error('not array');
+  }
+  let curNode: ILinkNode = {
+    value: arr[length - 1],
+  };
+
+  if (length === 1) {
+    return curNode;
+  }
+
+  for (let i = length - 2; i >= 0; i--) {
+    curNode = {
+      value: arr[i],
+      next: curNode,
+    };
+  }
+  return curNode;
+};
