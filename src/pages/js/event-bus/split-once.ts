@@ -1,3 +1,9 @@
+/*
+ * @Author: QD
+ * @Date: 2022-07-18 16:16:38
+ * @Description: 区分执行一次和多次
+ */
+
 type eventBus = {
   [key: string]: Array<Function>;
 };
