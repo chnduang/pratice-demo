@@ -4,7 +4,7 @@
  * @Description: 函数柯里化
  */
 
-export function curry(fn: Function) {
+export function curryAchieve(fn: Function) {
   const fnArgsLength = fn.length; // 获取函数参数的长度
   let args: any[] = []; // 运行函数时的实际传参的参数 存储
 
